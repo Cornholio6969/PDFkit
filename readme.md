@@ -4,6 +4,7 @@
 
 PDFKit is a modern open-source SaaS-style web app that lets you work with PDF files instantly in your browser.  
 Built with **Next.js 14 + TailwindCSS** (frontend) and **Python/Ghostscript** (for compression).
+<img width="1899" height="896" alt="image" src="https://github.com/user-attachments/assets/e686f521-500f-455d-98ad-2719eb18eff7" />
 
 ## ✨ Features
 
