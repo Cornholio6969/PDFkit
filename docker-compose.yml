@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - COMPRESSOR_URL=http://compressor:5001
+    depends_on:
+      - compressor
+
+  compressor:
+    build: ./python-compressor
+    expose:
+      - "5001"

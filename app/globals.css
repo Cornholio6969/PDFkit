@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #0b1220; --fg: #0f172a; }
+html, body { height: 100%; }
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(43,137,255,0.25), transparent 60%),
+    radial-gradient(1200px 600px at 10% 110%, rgba(43,137,255,0.20), transparent 60%),
+    linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+  color: #e6f0ff;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* layout helpers */
+.container { @apply mx-auto max-w-6xl px-4; }
+
+/* glass card */
+.card { @apply bg-white/5 border border-white/10 rounded-3xl p-6 shadow-soft backdrop-blur-md; }
+
+/* buttons */
+.btn { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition; }
+.btn-primary { @apply bg-brand-500 hover:bg-brand-600 text-white shadow-glow; }
+.btn-ghost { @apply bg-white/0 hover:bg-white/10 text-white border border-white/10; }
+
+/* links */
+.link { @apply text-brand-300 hover:text-brand-200 underline-offset-4 hover:underline; }
+
+/* inputs */
+.input {
+  @apply w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-white
+         placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-brand-500/40;
+}
+
+/* drop zone */
+.drop {
+  @apply flex flex-col items-center justify-center gap-3 border-2 border-dashed border-white/20
+         rounded-3xl p-10 bg-white/5 hover:border-brand-400/70 transition;
+}
+
+/* chips/badges */
+.badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white/5 border border-white/10; }
